@@ -83,7 +83,7 @@ if uploaded_file is not None:
             #st.success("Data Rescaled Successfully!")
 
             #st.subheader("Rescaled Data:")
-            Sst.write(data)
+            #Sst.write(data)
 
         except Exception as e:
             st.error(f"An error occurred while loading the data: {e}")
