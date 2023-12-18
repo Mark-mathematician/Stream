@@ -71,19 +71,19 @@ if uploaded_file is not None:
               pair_plot = sns.pairplot(data)
               st.pyplot(pair_plot)
 
-            rescaling_method = st.selectbox("Select Rescaling Method:", ["Min-Max Scaling", "Standardization"])
-            if rescaling_method == "Min-Max Scaling":
-                target_range = st.slider("Select Target Range:", 0.0, 1.0, (0.0, 1.0))
+            #rescaling_method = st.selectbox("Select Rescaling Method:", ["Min-Max Scaling", "Standardization"])
+            #if rescaling_method == "Min-Max Scaling":
+                #target_range = st.slider("Select Target Range:", 0.0, 1.0, (0.0, 1.0))
 
-            if st.button("Click here to Rescale Data"):
-              if rescaling_method == "Min-Max Scaling":
-                scaler = MinMaxScaler(feature_range=target_range)
-                data[selected_columns] = scaler.fit_transform(data[selected_columns])
+            #if st.button("Click here to Rescale Data"):
+              #if rescaling_method == "Min-Max Scaling":
+                #scaler = MinMaxScaler(feature_range=target_range)
+                #data[selected_columns] = scaler.fit_transform(data[selected_columns])
 
-            st.success("Data Rescaled Successfully!")
+            #st.success("Data Rescaled Successfully!")
 
-            st.subheader("Rescaled Data:")
-            st.write(data)
+            #st.subheader("Rescaled Data:")
+            Sst.write(data)
 
         except Exception as e:
             st.error(f"An error occurred while loading the data: {e}")
